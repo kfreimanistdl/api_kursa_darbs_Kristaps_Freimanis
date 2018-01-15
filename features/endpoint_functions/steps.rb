@@ -32,7 +32,10 @@ def add_login_test(project)
                     headers: { 'Content-Type' => 'application/json' },
                     cookies: @test_user.session_cookie,
                     payload: step_payload)
+    response_hash = JSON.parse(response)
     assert_equal(200, response.code, "Couldn't add step! Response : #{response}")
+    project.add_steps(response_hash)
+    #puts response_hash
   end
 
   def add_set_active_project_test(project)
@@ -65,6 +68,8 @@ def add_login_test(project)
                   headers: { 'Content-Type' => 'application/json' },
                   cookies: @test_user.session_cookie,
                   payload: step_payload)
-                  
+  response_hash = JSON.parse(response)
   assert_equal(200, response.code, "Couldn't add step! Response : #{response}")
+  project.add_steps(response_hash)
+  #puts response_hash
   end

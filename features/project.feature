@@ -1,7 +1,7 @@
 @project
-Feature:  2. uzdevums
+Feature:  Kursa darbs
 
-  Scenario: Select existing project and add environment with 3 global variables
+  Scenario: 2 un 3 uzdevums Kursa darba
     Given I am logged in apimation.com as a regular user
     And I find existing project
     And I select existing project
@@ -11,3 +11,4 @@ Feature:  2. uzdevums
     And I add successfull Login test case
     And I add Active collection
     And I add successfull Active project test case
+    And I create new test case with previously defined steps
