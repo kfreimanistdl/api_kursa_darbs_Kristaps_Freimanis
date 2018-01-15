@@ -1,0 +1,12 @@
+When(/^I add ([^"]*) collection$/) do | name |
+    collection = create_new_collection(name)
+    @project.add_collections(collection)
+end
+
+When(/^I add successfull Login test case/) do
+    add_login_test(@project)
+end
+
+When(/^I add successfull Active project test case/) do
+    add_set_active_project_test(@project)
+end
