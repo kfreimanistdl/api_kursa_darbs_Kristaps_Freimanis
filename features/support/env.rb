@@ -5,4 +5,5 @@ end
 After() do
   delete_environment(@project)
   delete_all_collections(@project)
+  delete_all_cases(@project)
 end
