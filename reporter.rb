@@ -53,8 +53,7 @@ embed.push({ 'color' => 7725089,
              'fields' => fields,
              'thumbnail' => thumbnail})
 
-payload = { 'content' => 'Kursa_Darbs_API_Kristaps_Freimanis', 
-            'embeds' => embed }.to_json
+payload = {'embeds' => embed }.to_json
 
 post('https://discordapp.com/api/webhooks/393067525451022336/uz2WgUi_8-6oS9zy2Pu_3l_-CtQvabdSlgflF_ojyxTxWgxO_8Vdj0qBDMNixDj6wlT1',
      headers: { 'Content-Type' => 'application/json' },
