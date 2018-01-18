@@ -57,10 +57,6 @@ def select_environment_and_add_global_variables(project)
   end
 end
 
-# def delete_global_variables(project)
-#
-# end
-
 def delete_environment(project)
   env_id = project.environments[rand(project.environments.length - 1)].environment_id
   response_delete = delete('http://apimation.com/environments/' + env_id,
